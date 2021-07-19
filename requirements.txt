@@ -1,9 +1,3 @@
-streamlit
-numpy
-pandas
-dataframe
-matplotlib
-altair
-bokeh
-pydeck
 Pillow
+requests
+streamlit
