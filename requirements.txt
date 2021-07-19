@@ -1,4 +1,6 @@
+streamlit
 matplotlib
+altair
 bokeh
 pydeck
 Pillow
