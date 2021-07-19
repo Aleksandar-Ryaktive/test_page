@@ -3,7 +3,6 @@ numpy
 pandas
 DataFrame
 matplotlib
-pyplot
 altair
 bokeh
 pydeck
