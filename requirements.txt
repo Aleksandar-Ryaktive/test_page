@@ -1,6 +1,7 @@
 streamlit
 numpy
 pandas
+dataframe
 matplotlib
 altair
 bokeh
