@@ -1,3 +1,10 @@
-Pillow
-requests
 streamlit
+numpy
+pandas
+DataFrame
+matplotlib
+pyplot
+altair
+bokeh
+pydeck
+Pillow
