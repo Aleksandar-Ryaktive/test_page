@@ -105,15 +105,16 @@ st.write(c)
 #    columns=('col %d' % i for i in range(20)))
 #st.dataframe(df.style.highlight_max(axis=0))  # Same as st.write(df)
 #
-#"""
-### Random bar chart
-#"""
-#
-#chart_data = pd.DataFrame(
-#     np.random.randn(8, 3),
-#     columns=['UX Design', 'Web Development', 'Data Analysis'])
-#
-#st.bar_chart(chart_data)
+
+"""
+## Random bar chart
+"""
+
+chart_data = pd.DataFrame(
+     np.random.randn(8, 3),
+     columns=['UX Design', 'Web Development', 'Data Analysis'])
+
+st.bar_chart(chart_data)
 
 
 """
