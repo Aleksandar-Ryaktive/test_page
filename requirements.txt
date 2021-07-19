@@ -1,0 +1,8 @@
+streamlit
+numpy
+pandas
+altair
+matplotlib
+pydeck
+PIL
+time
