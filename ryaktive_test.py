@@ -303,4 +303,130 @@ data2 = np.random.randn(10, 2)
 # Append the new data to the existing chart.
 chart.add_rows(data2)
 
+import pandas as pd 
+import numpy as np
+import streamlit as st
+import altair as alt
+import matplotlib.pyplot as plt
 
+
+# Draw a title and some text to the app:
+'''
+# This is the document title
+
+This is some _markdown_.
+'''
+
+df = pd.DataFrame({'col1': [1,2,3]})
+df  # <-- Draw the dataframe
+
+x = 10
+'x', x  # <-- Draw the string 'x' and then the value of x
+
+
+st.write('Hello, *World!* :sunglasses:')
+
+st.write(1234)
+st.write(pd.DataFrame({    
+    'first column': [1, 2, 3, 4],
+    'second column': [10, 20, 30, 40],
+}))
+
+
+# st.write('1 + 1 = ', 2)
+# st.write('Below is a DataFrame:', data_frame, 'Above is a dataframe.')
+
+
+st.header('This is header')
+
+st.subheader('This is subheader')
+
+
+code = '''def hello():
+    print("Hello, Streamlit!")'''
+st.code(code, language='python')
+
+
+st.json({
+    'foo': 'bar',
+    'baz': 'boz',
+    'stuff': [
+        'stuff 1',
+        'stuff 2',
+        'stuff 3',
+        'stuff 5',
+    ],
+})
+
+
+
+genre = st.radio(
+    "What's your favorite movie genre",
+    ('Comedy', 'Drama', 'Documentary'))
+
+if genre == 'Comedy':
+    st.write('You selected comedy.')
+else:
+    st.write("You didn't select comedy.")
+    
+    
+option = st.selectbox(
+    'How would you like to be contacted?',
+    ('Email', 'Home phone', 'Mobile phone'))
+
+st.write('You selected:', option)
+
+
+options = st.multiselect(
+    'What are your favorite colors',
+    ['Green', 'Yellow', 'Red', 'Blue'],
+    ['Yellow', 'Red'])
+
+st.write('You selected:', options)
+
+
+age = st.slider('How old are you?', 0, 130, 25)
+st.write("I'm ", age, 'years old')
+
+
+values = st.slider(
+    'Select a range of values',
+    0.0, 100.0, (25.0, 75.0))
+st.write('Values:', values)
+
+
+from datetime import time
+appointment = st.slider(
+    "Schedule your appointment:",
+    value=(time(11, 30), time(12, 45)))
+st.write("You're scheduled for:", appointment)
+
+
+
+from datetime import datetime
+
+start_time = st.slider(
+    "When do you start?",
+    value=datetime(2020, 1, 1, 9, 30),
+    format="MM/DD/YY - hh:mm")
+st.write("Start time:", start_time)
+
+
+color = st.select_slider(
+    'Select a color of the rainbow',
+    options=['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'])
+st.write('My favorite color is', color)
+
+
+start_color, end_color = st.select_slider(
+    'Select a range of color wavelength',
+    options=['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'],
+    value=('red', 'blue'))
+st.write('You selected wavelengths between', start_color, 'and', end_color)
+
+
+title = st.text_input('Movie title', 'Life of Brian')
+st.write('The current movie title is', title)
+
+number = st.number_input('Insert a number')
+st.write('The current number is ', number)
